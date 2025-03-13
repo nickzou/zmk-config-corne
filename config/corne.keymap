@@ -41,6 +41,20 @@
             bindings = <&kp LC(B)>;
             label = "TMUX_PREFIX";
         };
+
+        arrow_operator: arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GREATER_THAN>;
+            label = "ARROW";
+        };
+
+        thin_operator: thin_operator {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+            label = "THIN_OPERATOR";
+        };
     };
 
     behaviors {
