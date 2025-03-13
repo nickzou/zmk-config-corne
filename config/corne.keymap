@@ -49,7 +49,7 @@
 
             bindings = <
 &select_all  &kp Q           &kp W           &kp E               &kp R             &kp T      &kp Y      &kp U              &kp I                &kp O            &kp P               &kp BSPC
-&copy        &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G      &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMI  &kp SQT
+&copy        &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G      &mt SQT H  &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMI  &kp SQT
 &paste       &kp Z           &kp X           &kp C               &kp V             &kp B      &kp N      &kp M              &kp COMMA            &kp DOT          &kp FSLH            &kp RSHFT
                                              &kp LGUI            &mo 1             &kp RET    &kp SPACE  &mo 2              &kp RALT
             >;
