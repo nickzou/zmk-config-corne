@@ -11,6 +11,8 @@
 
 &led_strip { chain-length = <27>; };
 
+&mt { flavor = "tap-preferred"; };
+
 / {
     macros {
         select_all: select_all {
