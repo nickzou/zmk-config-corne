@@ -59,13 +59,13 @@
     };
 
     behaviors {
-        y_capsword: y_capsword {
+        mod_capsword: mod_capsword {
             compatible = "zmk,behavior-hold-tap";
-            label = "Y_CAPSWORD";
+            label = "MOD_CAPSWORD";
             bindings = <&caps_word>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <6>;
+            hold-trigger-key-positions = <7>;
             tapping-term-ms = <200>;
         };
 
@@ -91,10 +91,10 @@
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&select_all  &kp Q           &kp W           &kp E               &kp R             &kp T                  &y_capsword 0 Y  &mt CAPSLOCK U     &kp I                &kp O            &kp P               &none
-&copy        &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                  &mt SQT H        &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMI  &none
-&paste       &kp Z           &kp X           &kp C               &kp V             &kp B                  &kp N            &kp M              &kp COMMA            &kp DOT          &kp FSLH            &none
-                                             &kp TAB             &lt 1 MINUS       &tmux_space 0 SPACE    &kp RETURN       &lt 2 BACKSPACE    &kp ESCAPE
+&select_all  &kp Q           &kp W           &kp E               &kp R             &mt COLON T            &mt COLON Y  &mod_capsword 0 U  &mt CAPS I           &kp O            &kp P               &none
+&copy        &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                  &mt SQT H    &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMI  &none
+&paste       &kp Z           &kp X           &kp C               &kp V             &kp B                  &kp N        &kp M              &kp COMMA            &kp DOT          &kp FSLH            &none
+                                             &kp TAB             &lt 1 MINUS       &tmux_space 0 SPACE    &kp RETURN   &lt 2 BACKSPACE    &kp ESCAPE
             >;
         };
 
