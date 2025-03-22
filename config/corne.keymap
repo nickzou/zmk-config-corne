@@ -56,6 +56,13 @@
             bindings = <&kp MINUS &kp GREATER_THAN>;
             label = "THIN_OPERATOR";
         };
+
+        vim_emmet: vim_emmet {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Y) &kp COMMA>;
+            label = "VIM_EMMET";
+        };
     };
 
     behaviors {
@@ -78,6 +85,17 @@
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <38>;
         };
+
+        mod_vim_emmet: mod_vim_emmet {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_VIM_EMMET";
+            bindings = <&vim_emmet>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <6>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -91,10 +109,10 @@
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&select_all  &kp Q           &kp W           &kp E               &kp R             &mt COLON T            &mt COLON Y  &mod_capsword 0 U  &mt CAPS I           &kp O            &kp P               &none
-&copy        &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                  &mt SQT H    &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMI  &none
-&paste       &kp Z           &kp X           &kp C               &kp V             &kp B                  &kp N        &kp M              &kp COMMA            &kp DOT          &kp FSLH            &none
-                                             &kp TAB             &lt 1 MINUS       &tmux_space 0 SPACE    &kp RETURN   &lt 2 BACKSPACE    &kp ESCAPE
+&select_all  &kp Q           &kp W           &kp E               &kp R             &mt COLON T            &mod_vim_emmet 0 Y  &mod_capsword 0 U  &mt CAPS I           &kp O            &kp P               &none
+&copy        &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                  &mt SQT H           &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMI  &none
+&paste       &kp Z           &kp X           &kp C               &kp V             &kp B                  &kp N               &kp M              &kp COMMA            &kp DOT          &kp FSLH            &none
+                                             &kp TAB             &lt 1 MINUS       &tmux_space 0 SPACE    &kp RETURN          &lt 2 BACKSPACE    &kp ESCAPE
             >;
         };
 
