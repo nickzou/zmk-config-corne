@@ -120,8 +120,8 @@
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&select_all         &kp Q           &kp W           &kp E               &kp R             &mt COLON T            &mod_vim_emmet 0 Y  &mod_capsword 0 U  &mt CAPS I           &kp O            &kp P               &none
-&copy               &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                  &mt SQT H           &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMI  &none
+&select_all         &kp Q           &kp W           &kp E               &kp R             &kp T                  &mod_vim_emmet 0 Y  &mod_capsword 0 U  &kp I                &kp O            &kp P               &none
+&copy               &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &mt COLON G            &mt SQT H           &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMI  &none
 &mod_enter ENTER 0  &kp Z           &kp X           &kp C               &kp V             &kp B                  &kp N               &kp M              &kp COMMA            &kp DOT          &kp FSLH            &none
                                                     &kp TAB             &lt 1 MINUS       &tmux_space 0 SPACE    &kp RETURN          &lt 2 BACKSPACE    &kp ESCAPE
             >;
